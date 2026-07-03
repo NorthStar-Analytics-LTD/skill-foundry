@@ -11,7 +11,7 @@ description: >
 
 # Build: /health-check
 
-> After we migrated 1,500 dashboards with a confirmed owner on every one, I designed the governance framework that had to survive my exit: every dashboard carries a lifecycle stage — Draft, Verified, Drifted, Archived — with API-driven Verified-badge automation and AI-driven review workflows. Because the audit is an event, but rot is a process. A dashboard is Verified the day someone checks it; six weeks later the model underneath has changed, the owner has left, and the badge is now a lie.
+> After we migrated 2,000+ dashboards with a confirmed owner on every one, I designed the governance framework that had to survive my exit: every dashboard carries a lifecycle stage — Draft, Verified, Drifted, Archived — with API-driven Verified-badge automation and AI-driven review workflows. Because the audit is an event, but rot is a process. A dashboard is Verified the day someone checks it; six weeks later the model underneath has changed, the owner has left, and the badge is now a lie.
 >
 > Drift is not hypothetical. The upstream column gets renamed and the chart silently shows zero. The owner departs and nobody inherits. Views decay to nothing and the dashboard becomes archaeology. Each of these is detectable — mechanically, on a schedule. This builder generates the detector.
 

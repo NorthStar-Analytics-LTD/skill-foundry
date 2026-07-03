@@ -10,7 +10,7 @@ description: >
 
 # Build: /support-triage
 
-> During a global BI migration I was the primary responder in the analytics support channel: 10 to 30 messages a day. Broken charts, access requests, "why doesn't this match", feature requests filed as bugs, bugs filed as questions. The job was never answering everything myself — it was diagnosing fast, routing each message to the right tribe's analyst, and escalating real bugs to the vendor with enough detail that they got fixed.
+> During a global BI migration I was the primary responder in the analytics support channel: 10 to 30 messages a day. Broken charts, access requests, "why doesn't this match", feature requests filed as bugs, bugs filed as questions. The job was never answering everything myself — it was diagnosing fast, routing each message to the right domain team's analyst, and escalating real bugs to the vendor with enough detail that they got fixed.
 >
 > Here is the pattern nobody tells you: most support messages are one of five shapes, and the shape determines the route. Classify fast, and the channel stays quiet. Answer everything ad hoc, and you become the bottleneck the channel was created to remove. This builder generates the classifier — trained on your routes, not mine.
 

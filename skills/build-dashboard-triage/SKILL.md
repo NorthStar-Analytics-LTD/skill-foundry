@@ -9,7 +9,7 @@ description: >
 
 # Build: /dashboard-triage
 
-> We once audited over 10,000 dashboards at a single company. Roughly 3,000 were genuinely active. 1,500 had confirmed owners. The other 7,000 were orphans — no owner, no views in six months, some built by contractors who had left years ago. The data team's instinct was to migrate everything: "We don't know what Finance uses." We pushed back: if Finance can't name the dashboard, Finance doesn't use it. We archived 7,000 with a 30-day reclaim window.
+> We once audited over 10,000 dashboards at a single company. Only a fraction were genuinely active with confirmed owners. Some 7,000 were orphans — no owner, no views in six months, some built by contractors who had left years ago. The data team's instinct was to migrate everything: "We don't know what Finance uses." We pushed back: if Finance can't name the dashboard, Finance doesn't use it. We archived 7,000 with a 30-day reclaim window.
 >
 > Not a single reclaim came in. Nobody misses dashboards they can't name.
 

@@ -13,7 +13,7 @@ description: >
 
 > At a global fintech we migrated 2,000+ dashboards out of a 10,000-dashboard estate — one of the largest BI migrations in Europe. The single biggest unlock was not a script. It was giving 700+ analysts a skill they could run themselves, so migration stopped being a data-team bottleneck and became something an analyst finished before their second coffee.
 >
-> Halfway through, a version-history bug silently overwrote seventy stakeholder edits across 467 dashboards. We rolled back, contacted every owner within two hours, and rebuilt the process with explicit checkpoints. The skill this builder generates carries those checkpoints, whatever tools you are moving between — because I am not willing to learn that lesson twice.
+> Halfway through, a platform bug silently overwrote stakeholder edits across hundreds of dashboards during a re-migration batch. We rolled back, contacted every affected owner directly, and rebuilt the process with explicit checkpoints. The skill this builder generates carries those checkpoints, whatever tools you are moving between — because I am not willing to learn that lesson twice.
 
 You are about to generate a `/migrate-chart` skill customised to this company's source tool, target tool and access setup. This builder is **tool-agnostic**: it does not assume Looker, Lightdash or anything else. It grows the skill from what it finds and what you tell it. Complete all three phases first.
 
@@ -40,7 +40,7 @@ Ask one at a time. Skip anything Phase 1 already answered — say so explicitly 
 3. **"Is there a triage list?"** (KEEP / MIGRATE / ARCHIVE per report) — if not, stop and recommend running `/build-dashboard-triage` first. Migrating an unaudited estate means migrating thousands of orphans nobody will open. I have watched teams try. Do not let them.
 4. **"Who owns the target tool's conventions — and are they written down?"** If unwritten, the generated skill encodes the conventions found in Phase 1 as the standard, and says so explicitly.
 5. **"How do analysts prove the migrated numbers match?"** If there is no answer, the generated skill imposes one: side-by-side totals on the top three measures from both tools, evidence attached to the PR or migration log.
-6. **"What happens to the original after a successful migration?"** (redirect, archive notice, sunset date?) — the skill includes the post-migration step so nothing gets migrated twice or edited in two places. Parallel editing is how the 467-dashboard incident happened.
+6. **"What happens to the original after a successful migration?"** (redirect, archive notice, sunset date?) — the skill includes the post-migration step so nothing gets migrated twice or edited in two places. Parallel editing is how the mid-migration incident happened.
 7. **"Which reports are regulatory or board-facing?"** — these get a mandatory human sign-off step, no exceptions.
 
 ## Phase 3 — Generate
