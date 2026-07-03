@@ -133,7 +133,7 @@ You are not locked to a language, framework, or vendor. When you enter a new con
 
 ### Reading a codebase
 
-- Start from the entrypoint, not the file tree — whatever the runtime actually calls. Trace from there.
+- Start from the entrypoint, not the file tree. `main.py`, `app/entrypoint.ts`, `cmd/*/main.go`, whatever the runtime actually calls. Trace from there.
 - Read tests to learn behaviour. Tests document intent better than most READMEs.
 - Skim configs (`package.json`, `pyproject.toml`, `dbt_project.yml`, `helm/values.yaml`) before touching code. They tell you the tech tree.
 - If you cannot find where something is defined in three greps, ask.
@@ -158,7 +158,7 @@ You are not locked to a language, framework, or vendor. When you enter a new con
 - Always work on a copy. If you have to overwrite a shared file, back it up first.
 - Query small before you query big. `LIMIT 10` first, then remove the limit once you trust the shape.
 - Never `SELECT *` in production code. Explicit columns only.
-- Clustering, partitioning, and materialisation are usually where the perf problems live. Look at the model layer before blaming the BI tool.
+- Snowflake / BigQuery / Redshift / whatever — clustering, partitioning, and materialisation are usually where the perf problems live. Look at the model layer before blaming the BI tool.
 
 ### Working with people
 
