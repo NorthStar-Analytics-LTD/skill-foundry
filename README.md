@@ -2,13 +2,27 @@
 
 **Claude Code skills that interview your team before writing a line.**
 
+## The master skill: /northstar
+
+[`northstar`](skills/northstar/SKILL.md) is the whole method as one skill: a forward-deployed analytics consultant that lands in your repo without a brief, senses the environment, forms a hypothesis, drafts a plan it can defend, executes in small visible loops, fixes root causes instead of symptoms, documents everything recurring, and hands over cleanly. It covers how to read a codebase, how to talk to stakeholders and executives, what to do when there is no data platform at all, how to handle funnels and marketing data, how to serve nine teams at once without drowning, and when to build a script versus a doc versus nothing.
+
+Give it a problem area:
+
+```
+/northstar our reporting estate is a mess and nobody trusts the numbers
+```
+
+It makes its own plan. When the problem matches a specialised shape, it delegates to the sub-skills below — but each sub-skill also works standalone.
+
+This is the method I sell. It is here, free, because I am confident enough in it to let you run it before you ever talk to me: if the skill makes your team faster, the version with me embedded in your workflows is the upgrade, not the product.
+
+## The builders
+
 Most Claude Code skills are generic. They know nothing about your dbt models, your naming conventions, your review process, or the Slack channel where analysts report broken charts. So they produce generic output, and your analysts quietly stop using them.
 
 These skills are different. They are **skill builders**: each one inspects your repository, asks your team a short set of questions — the questions a consultant asks in the first week of an engagement — and then writes a custom skill calibrated to *your* stack. They are tool-agnostic by design: the builder detects what it can, asks about your source and target tools and what access Claude Code has (MCP servers, APIs, exports), and grows the skill from the answers. The output is versioned in your repo and maintained like any other code.
 
 They exist because I have spent a decade embedded in analytics teams — running BI migrations, auditing dashboard estates, training 700+ analysts across 15+ countries, and answering the support channel myself. Every builder encodes a lesson that cost something to learn. The original skills my clients' analysts run daily started exactly like this: with questions, not code.
-
-## The builders
 
 | Builder | Generates | The lesson it encodes |
 |---|---|---|
@@ -23,6 +37,7 @@ They exist because I have spent a decade embedded in analytics teams — running
 | [`build-support-triage`](skills/build-support-triage/SKILL.md) | `/support-triage` — first responder for your analytics support channel: classify, diagnose, route, escalate | Most support messages are one of five shapes, and the shape determines the route |
 | [`build-board-pack`](skills/build-board-pack/SKILL.md) | `/board-pack` — assemble the recurring board/trade pack from governed metrics only, commentary in your house style | No number enters the pack unless it traces to a governed definition |
 | [`build-dashboard-health`](skills/build-dashboard-health/SKILL.md) | `/health-check` — the ongoing lifecycle loop: drift detection, Draft/Verified/Drifted/Archived transitions, badge automation | The audit is an event; rot is a process |
+| [`build-data-brief`](skills/build-data-brief/SKILL.md) | `/data-brief` — turn a vague business request into a decision-shaped brief before an analyst touches it | The requested dashboard is a guess at a solution; the job is the problem behind it |
 
 ## How a builder works
 
@@ -39,24 +54,30 @@ The generated skills know about each other. `/support-triage` delegates a broken
 
 ## Installation
 
-Download the builders from [northstaranalytics.co.uk/skill-foundry](https://northstaranalytics.co.uk/skill-foundry) and unzip into your repo:
+One command, from the root of your repo:
+
+```bash
+curl -fsSL https://northstaranalytics.co.uk/skills/install.sh | sh
+```
+
+Or manually: download the bundle from [northstaranalytics.co.uk/skill-foundry](https://northstaranalytics.co.uk/skill-foundry) and unzip:
 
 ```bash
 unzip skill-foundry.zip -d your-repo/.claude/skills/
 ```
 
-Or pull a single builder:
+Or pull a single skill:
 
 ```bash
-mkdir -p .claude/skills/build-fix-chart
-curl -fsSL https://northstaranalytics.co.uk/skills/build-fix-chart.md \
-  -o .claude/skills/build-fix-chart/SKILL.md
+mkdir -p .claude/skills/northstar
+curl -fsSL https://northstaranalytics.co.uk/skills/northstar.md \
+  -o .claude/skills/northstar/SKILL.md
 ```
 
-Then, inside Claude Code, run any builder:
+Then, inside Claude Code:
 
 ```
-/build-fix-chart
+/northstar <your problem area>
 ```
 
 ## What these are not
