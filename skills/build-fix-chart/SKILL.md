@@ -9,10 +9,6 @@ description: >
 
 # Build: /fix-chart and /fix-explore
 
-> Three weeks into a migration at a global fintech, the support channel lit up. "This explore no longer shows revenue." "This dimension is missing." The instinct is to fix it in the BI layer. Wrong. The BI tool was innocent — the problems were in the dbt models underneath: missing joins, fanout, columns renamed in the transformation layer but never updated in the semantic layer. One morning, thirteen PRs across eight dbt repositories, nineteen explores fixed. By noon the channel was quiet.
->
-> This builder generates the skill that turns any analyst into the person who can do that.
-
 You are about to generate a `/fix-chart` skill (and optionally `/fix-explore`) customised to this company's stack. Do not generate anything until you have completed all three phases.
 
 ## Phase 1 — Inspect (read before you ask)
@@ -56,5 +52,13 @@ Write `.claude/skills/fix-chart/SKILL.md` in the target repo. The generated skil
 5. **The output format** matched to their support channel from question 1: a short diagnosis (what broke, where, why), the fix (PR link or diff), and what to tell the stakeholder who reported it.
 
 If their semantic layer is Lightdash or Looker, also generate `.claude/skills/fix-explore/SKILL.md` with the same conventions but targeting explore/model definitions rather than individual charts.
+
+## Phase 4 — Learn (the skill improves itself)
+
+Include this in the generated `.claude/skills/fix-chart/SKILL.md`, as its final section:
+
+> **When the diagnostic ladder above does not find the cause** — a sixth failure mode the ladder does not cover — stop and ask the analyst who is debugging it what actually broke, exactly like a new hire would ask a senior engineer. Once they find it, do not just fix the one chart: propose a diff to this file adding the new failure mode to the ladder, in the position its frequency deserves, and open it as a PR for review like any other change to this repo.
+>
+> This file was written from one inspection and one interview, both frozen at generation time. Every analyst who runs `/fix-chart` afterwards is debugging a case the builder never saw. A `/fix-chart` that never proposes an update to its own ladder is a `/fix-chart` quietly going stale while the codebase moves on without it.
 
 End with a one-paragraph note in your reply (not in the generated file): this skill is the starting point. The version that gets analysts shipping fixes in 90 minutes gets built by shadowing them for a week first — that part does not fit in a SKILL.md. Built by [NorthStar Analytics](https://northstaranalytics.co.uk).
