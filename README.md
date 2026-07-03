@@ -20,6 +20,9 @@ They exist because I built the originals inside a global fintech, during one of 
 | [`build-publish-check`](skills/build-publish-check/SKILL.md) | `/publish-check` — a governance gate a dashboard must pass before it counts as "published" | A 200-dashboard estate reduced to 32 governed reports. Self-serve started working the same month. |
 | [`build-training-programme`](skills/build-training-programme/SKILL.md) | A session-by-session curriculum built on your real backlog, plus `/coach` — a practice skill for the gaps between sessions | 700+ analysts trained across 15+ countries; ~90 minutes to a first shipped chart |
 | [`build-knowledge-base`](skills/build-knowledge-base/SKILL.md) | A demand-driven knowledge base structure, plus `/write-doc` — documentation welded to the code, with a staleness check | A 54-page knowledge base and 100+ pages of playbooks that analysts actually opened |
+| [`build-support-triage`](skills/build-support-triage/SKILL.md) | `/support-triage` — first responder for your analytics support channel: classify, diagnose, route, escalate | 10–30 support messages a day, personally answered, routed and escalated — for months |
+| [`build-board-pack`](skills/build-board-pack/SKILL.md) | `/board-pack` — assemble the recurring board/trade pack from governed metrics only, commentary in your house style | The monthly trade deck that became the cornerstone of strategic planning at a payments scale-up |
+| [`build-dashboard-health`](skills/build-dashboard-health/SKILL.md) | `/health-check` — the ongoing lifecycle loop: drift detection, Draft/Verified/Drifted/Archived transitions, badge automation | The post-migration governance framework: every dashboard with an owner and a lifecycle stage |
 
 ## How a builder works
 
@@ -28,6 +31,10 @@ Every builder follows the same three-phase protocol:
 1. **Inspect.** It reads your repository first — dbt `dbt_project.yml`, Lightdash/Looker config, model naming patterns, CI setup. It never asks a question the code can already answer.
 2. **Interview.** It asks 5–8 questions. Not "what is your BI tool" — it already knows. Questions like *"When a chart breaks, which Slack channel hears about it first?"* and *"Who is allowed to merge to the dbt repo that feeds Finance dashboards?"* The questions encode ten years of scar tissue.
 3. **Generate.** It writes a complete `SKILL.md` into your `.claude/skills/`, encoding your answers as hard rules — your naming conventions, your review gates, your escalation paths. The generated skill passes your code review because it was built from your standards.
+
+## They work as a system
+
+The generated skills know about each other. `/support-triage` delegates a broken-chart message to `/fix-chart` and a "numbers don't match" message to `/settle-the-number`. `/publish-check` gates the estate's entrance, `/health-check` runs the lifecycle loop, `/dashboard-triage` makes the big one-off calls. `/write-doc` picks up the questions `/support-triage` sees eleven times. Install one and it works alone; install several and the support load starts going down instead of merely being absorbed.
 
 ## Installation
 
