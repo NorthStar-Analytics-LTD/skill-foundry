@@ -23,6 +23,7 @@ You are about to generate a `/dashboard-triage` skill customised to this company
    - Tableau: workbook usage stats
    - Failing all: exports, admin CSVs, or a spreadsheet someone maintains
    Record what usage signals are actually available: view counts, last-viewed date, owner field, folder structure.
+   Also record **how Claude Code can reach them**: an MCP server config (`.mcp.json`, `.claude/settings.json`), an API key referenced in env files (note the integration, never the secret), a CLI, or manual exports only. The generated skill's mechanics are built around whichever access path exists — and if none does, the skill will open with a setup-prerequisite section recommending the concrete option for their tool.
 2. **Check for existing governance artefacts.** Ownership registers, lifecycle tags, "certified" badges, naming prefixes that imply status. Their presence (usually absence) shapes how much the generated skill can automate.
 3. **Sample 20 dashboards** if metadata is accessible. Estimate the orphan rate: no owner + no views in 90 days. This number goes in your Phase 1 summary — it is usually the moment the room goes quiet.
 

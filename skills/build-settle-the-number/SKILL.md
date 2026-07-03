@@ -14,6 +14,22 @@ description: >
 >
 > The number is almost never *wrong*. The two numbers answer two different questions that happen to share a name: different date grain, different filter on refunds, a join that fans out, or a definition that changed in dbt eight months ago and never reached the second dashboard. The debate ends the moment someone shows the exact line where the definitions diverge. This builder generates the skill that finds that line.
 
+## What the generated skill does, concretely
+
+An analyst gets the "why don't these match?" Slack message and runs:
+
+```
+/settle-the-number conversion rate: marketing weekly dashboard vs finance board pack
+```
+
+The skill traces both numbers through the semantic layer to the dbt SQL, finds the hop where they diverge, and returns something like:
+
+> **Both numbers are correct answers to different questions.** Marketing's 4.2% counts sessions with a checkout event (`stg_web_sessions`, refunds included). Finance's 3.1% counts completed paid orders net of refunds (`fct_orders`, `is_refunded = false`). The definitions diverged in PR #482, eight months ago.
+> **Divergence:** `models/marts/fct_orders.sql:34` vs `models/staging/stg_web_sessions.sql:19` *(quoted side by side)*
+> **Recommendation:** these need two names. Draft dictionary entries attached.
+
+Ten minutes, evidence included, no meeting required. Your Phase 1–3 work below is what makes this output possible on *their* stack instead of a generic guess.
+
 You are about to generate a `/settle-the-number` skill customised to this company's data stack. Complete all three phases first.
 
 ## Phase 1 — Inspect
