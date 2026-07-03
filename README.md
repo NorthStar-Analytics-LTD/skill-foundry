@@ -29,7 +29,7 @@ Every builder follows the same three-phase protocol:
 ## Installation
 
 ```bash
-git clone https://github.com/northstar-analytics/skill-foundry
+git clone https://github.com/NorthStar-Analytics-LTD/skill-foundry
 cp -r skill-foundry/skills/* your-repo/.claude/skills/
 ```
 
