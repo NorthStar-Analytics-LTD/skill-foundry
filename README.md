@@ -96,7 +96,3 @@ These builders produce a competent starting point — the skill your team should
 If the generated skill makes your team faster, imagine the version built after two weeks inside your workflows.
 
 **NorthStar Analytics** — [northstaranalytics.co.uk](https://northstaranalytics.co.uk) · AI Enablement for Analytics Teams
-
----
-
-*British English throughout. No buzzwords were harmed in the making of these skills.*
