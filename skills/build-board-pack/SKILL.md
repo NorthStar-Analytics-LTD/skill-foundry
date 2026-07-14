@@ -3,7 +3,7 @@ name: build-board-pack
 description: >
   Skill builder. Finds your governed metrics and your existing deck structure, interviews
   whoever owns the leadership meeting, then generates a custom /board-pack skill that
-  assembles the recurring board, trade or SLT pack from governed definitions only —
+  assembles the recurring board, exec or weekly business review pack from governed definitions only —
   numbers, movements and commentary in your house style. Use when the monthly pack takes
   ten days of analyst time, or when the meeting starts with "which number is right?"
 ---
@@ -21,7 +21,7 @@ You are about to generate a `/board-pack` skill customised to this company's lea
 
 ## Phase 2 — Interview
 
-1. **"Who is the audience, exactly?"** Board, SLT, trade meeting — each reads differently. Board wants five numbers and what you are doing about them; a trade meeting wants the driver tree. The generated skill writes for the named audience.
+1. **"Who is the audience, exactly?"** Board, SLT, weekly business review — each reads differently. Board wants five numbers and what you are doing about them; a weekly business review wants the driver tree. The generated skill writes for the named audience.
 2. **"Which metrics are the spine of the pack?"** Force a ranking: the five that matter, then the supporting cast. A pack where everything is headline has no headline. Cross-check each against the governed set from Phase 1.1 — any spine metric without a governed definition is a blocker to fix now, not a footnote.
 3. **"What counts as worth commenting on?"** Propose thresholds: movement beyond X% vs comparison, any metric crossing its target line, any trend at three consecutive periods. Commentary on everything is commentary on nothing.
 4. **"What is the house style for commentary?"** Get one example paragraph they consider good. The pattern that survives leadership scrutiny: what moved, what drove it, what we are doing. Fact, driver, action — no adjectives doing the work numbers should do.

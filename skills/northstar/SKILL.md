@@ -202,7 +202,7 @@ You are not locked to a language, framework, or vendor. When you enter a new con
 
 ### Serving many teams at once
 
-- When you serve nine teams, intake discipline is survival. Every request lands in one visible place, in one shape: what decision, by when, who owns it.
+- When you serve many teams, intake discipline is survival. Every request lands in one visible place, in one shape: what decision, by when, who owns it.
 - Prioritise by decision impact, not by seniority of the requester or loudness of the ping.
 - Run office hours for the long tail. A weekly open half-hour absorbs the "quick questions" that would otherwise shred your calendar.
 - Say no by showing the queue. "Here is what is in front of you and why" ends more arguments than any prioritisation framework.

@@ -4,7 +4,7 @@
 
 ## The master skill: /northstar
 
-[`northstar`](skills/northstar/SKILL.md) is the whole method as one skill: a forward-deployed analytics consultant that lands in your repo without a brief, senses the environment, forms a hypothesis, drafts a plan it can defend, executes in small visible loops, fixes root causes instead of symptoms, documents everything recurring, and hands over cleanly. It covers how to read a codebase, how to talk to stakeholders and executives, what to do when there is no data platform at all, how to handle funnels and marketing data, how to serve nine teams at once without drowning, and when to build a script versus a doc versus nothing.
+[`northstar`](skills/northstar/SKILL.md) is the whole method as one skill: a forward-deployed analytics consultant that lands in your repo without a brief, senses the environment, forms a hypothesis, drafts a plan it can defend, executes in small visible loops, fixes root causes instead of symptoms, documents everything recurring, and hands over cleanly. It covers how to read a codebase, how to talk to stakeholders and executives, what to do when there is no data platform at all, how to handle funnels and marketing data, how to serve many teams at once without drowning, and when to build a script versus a doc versus nothing.
 
 Give it a problem area:
 
@@ -22,7 +22,7 @@ Most Claude Code skills are generic. They know nothing about your dbt models, yo
 
 These skills are different. They are **skill builders**: each one inspects your repository, asks your team a short set of questions — the questions a consultant asks in the first week of an engagement — and then writes a custom skill calibrated to *your* stack. They are tool-agnostic by design: the builder detects what it can, asks about your source and target tools and what access Claude Code has (MCP servers, APIs, exports), and grows the skill from the answers. The output is versioned in your repo and maintained like any other code.
 
-They exist because I have spent a decade embedded in analytics teams — running BI migrations, auditing dashboard estates, training 700+ analysts across 15+ countries, and answering the support channel myself. Every builder encodes a lesson that cost something to learn. The original skills my clients' analysts run daily started exactly like this: with questions, not code.
+They exist because I have spent a decade embedded in analytics teams — running BI migrations, auditing dashboard estates, training hundreds of analysts, and answering the support channel myself. Every builder encodes a lesson that cost something to learn. The original skills my clients' analysts run daily started exactly like this: with questions, not code.
 
 | Builder | Generates | The lesson it encodes |
 |---|---|---|
@@ -35,7 +35,7 @@ They exist because I have spent a decade embedded in analytics teams — running
 | [`build-training-programme`](skills/build-training-programme/SKILL.md) | A session-by-session curriculum built on your real backlog, plus `/coach` — a practice skill for the gaps between sessions | Analysts learn by shipping, not by watching |
 | [`build-knowledge-base`](skills/build-knowledge-base/SKILL.md) | A demand-driven knowledge base structure, plus `/write-doc` — documentation welded to the code, with a staleness check | A doc that has drifted from the code answers confidently and wrongly |
 | [`build-support-triage`](skills/build-support-triage/SKILL.md) | `/support-triage` — first responder for your analytics support channel: classify, diagnose, route, escalate | Most support messages are one of five shapes, and the shape determines the route |
-| [`build-board-pack`](skills/build-board-pack/SKILL.md) | `/board-pack` — assemble the recurring board/trade pack from governed metrics only, commentary in your house style | No number enters the pack unless it traces to a governed definition |
+| [`build-board-pack`](skills/build-board-pack/SKILL.md) | `/board-pack` — assemble the recurring board/exec pack from governed metrics only, commentary in your house style | No number enters the pack unless it traces to a governed definition |
 | [`build-dashboard-health`](skills/build-dashboard-health/SKILL.md) | `/health-check` — the ongoing lifecycle loop: drift detection, Draft/Verified/Drifted/Archived transitions, badge automation | The audit is an event; rot is a process |
 | [`build-data-brief`](skills/build-data-brief/SKILL.md) | `/data-brief` — turn a vague business request into a decision-shaped brief before an analyst touches it | The requested dashboard is a guess at a solution; the job is the problem behind it |
 
@@ -46,7 +46,7 @@ Every builder follows the same four-phase protocol:
 1. **Inspect.** It reads your repository first — dbt `dbt_project.yml`, BI tool artefacts, model naming patterns, CI setup, existing MCP and API access. It never asks a question the code can already answer.
 2. **Interview.** It asks 5–8 questions. Not "what is your BI tool" — it already knows. Questions like *"When a chart breaks, which Slack channel hears about it first?"* and *"Who is allowed to merge to the dbt repo that feeds Finance dashboards?"* The questions encode ten years of scar tissue.
 3. **Generate.** It writes a complete `SKILL.md` into your `.claude/skills/`, encoding your answers as hard rules — your naming conventions, your review gates, your escalation paths. The generated skill passes your code review because it was built from your standards.
-4. **Learn.** Every generated skill ships with a fourth phase built in: when it hits a case its rules do not cover, it stops and asks a human instead of guessing — then proposes a PR to its own SKILL.md encoding what it just learned. This is how a fifty-dashboard clean-up actually happens: a simple skill fixes the first ten, learns from what analysts correct on the next twenty, and by dashboard fifty it is catching cases the first version never could. Every analyst who runs it becomes, briefly, someone teaching it.
+4. **Learn.** Every generated skill ships with a fourth phase built in: when it hits a case its rules do not cover, it stops and asks a human instead of guessing — then proposes a PR to its own SKILL.md encoding what it just learned. This is how a large dashboard clean-up actually happens: a simple skill fixes the first batch, learns from what analysts correct on the next, and by the end of the estate it is catching cases the first version never could. Every analyst who runs it becomes, briefly, someone teaching it.
 
 ## They work as a system
 
