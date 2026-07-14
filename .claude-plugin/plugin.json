@@ -1,0 +1,14 @@
+{
+  "name": "skill-foundry",
+  "description": "The NorthStar Skill Foundry: /northstar master skill plus 12 skill builders that interview your analytics team and generate skills calibrated to your stack.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Northstar Analytics Ltd",
+    "email": "zekeriya@northstaranalytics.co.uk",
+    "url": "https://northstaranalytics.co.uk"
+  },
+  "homepage": "https://northstaranalytics.co.uk/skill-foundry",
+  "repository": "https://github.com/NorthStar-Analytics-LTD/skill-foundry",
+  "license": "MIT",
+  "keywords": ["analytics", "bi", "dbt", "lightdash", "looker", "skills", "data"]
+}

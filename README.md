@@ -54,6 +54,15 @@ The generated skills know about each other. `/support-triage` delegates a broken
 
 ## Installation
 
+### As a Claude Code plugin (recommended)
+
+```
+/plugin marketplace add NorthStar-Analytics-LTD/skill-foundry
+/plugin install skill-foundry@northstar-analytics
+```
+
+### Or copy the skills into your repo
+
 One command, from the root of your repo:
 
 ```bash
